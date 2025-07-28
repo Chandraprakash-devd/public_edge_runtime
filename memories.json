@@ -1,0 +1,56 @@
+{
+  "memories": [
+    {
+      "id": "mem_1753710971932_zh7cbrmib",
+      "content": "Configuration Railway pour Supabase Edge Functions:\n- PORT=9000 (configuré dans le Dockerfile et l'env)\n- HOST=\"::\" pour IPv6\n- Variables spécifiques: Kong références internes, MINIO, RabbitMQ\n- Le code utilise Deno.env.get(\"PORT\") || \"9000\"\n- Problème potentiel: le HOST=\"::\" n'est pas utilisé dans le code actuel",
+      "type": "config",
+      "tags": [
+        "config",
+        "railway",
+        "configuration",
+        "edge-runtime",
+        "ipv6"
+      ],
+      "timestamp": "2025-07-28T13:56:11.932Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-28T13:56:11.932Z",
+      "lastVerified": "2025-07-28T13:56:11.932Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753711488262_i962xxev7",
+      "content": "Correction importante - Railway nécessite IPv4, pas IPv6:\n- HOST=\"::\" dans l'env est incorrect pour Railway\n- Railway nécessite \"0.0.0.0\" pour IPv4\n- Le code Deno actuel n'utilise pas HOST et écoute sur 0.0.0.0 par défaut\n- Health-check existe et teste Supabase, RabbitMQ, MinIO\n- File-upload n'existe pas mais est référencé dans main/index.ts",
+      "type": "config",
+      "tags": [
+        "config",
+        "railway",
+        "ipv4",
+        "configuration",
+        "correction"
+      ],
+      "timestamp": "2025-07-28T14:04:48.262Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-28T14:04:48.262Z",
+      "lastVerified": "2025-07-28T14:04:48.262Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753711745491_lddjlokl7",
+      "content": "CORRECTION - L'utilisateur veut IPv6, pas IPv4:\n- HOST=\"::\" est correct pour activer IPv6\n- Railway doit supporter IPv6\n- Le code Deno doit utiliser la variable HOST pour écouter sur \"::\"\n- Health-check existe et fonctionne\n- Supprimer la référence à file-upload qui n'existe pas",
+      "type": "general",
+      "tags": [
+        "general",
+        "railway",
+        "ipv6",
+        "configuration",
+        "final"
+      ],
+      "timestamp": "2025-07-28T14:09:05.491Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-28T14:09:05.491Z",
+      "lastVerified": "2025-07-28T14:09:05.491Z",
+      "status": "fresh"
+    }
+  ],
+  "lastUpdated": "2025-07-28T14:09:05.491Z"
+}
