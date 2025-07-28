@@ -1,5 +1,3 @@
-Here is the exact English translation with Markdown preserved:
-
 ## Supabase Edge Functions Project
 
 This project contains Supabase Edge Functions deployable on Railway using the official Docker image `ghcr.io/supabase/edge-runtime`.
