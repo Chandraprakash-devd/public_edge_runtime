@@ -24,6 +24,7 @@ This project contains Supabase Edge Functions deployable on Railway using the of
 
 1. **Prepare your repository** with the recommended structure.
 2. **Create the `Dockerfile.supabase-edge`** (already done).
-3. **Configure environment variables** in Railway (SUPABASE\_URL, SUPABASE\_ANON\_KEY, SUPABASE\_SERVICE\_ROLE\_KEY).
-4. **Deploy via Git** or GitHub connection.
-5. **Generate a domain** to access your functions.
+3. **Configure environment variables** in Railway
+4. SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY,EDGE_FUNCTION_SECRET, HOST="::"  for ipv6 , PORT="9000" ).
+5. **Deploy via Git** or GitHub connection.
+6. **Generate a domain** to access your functions.
